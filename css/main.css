@@ -61,3 +61,196 @@ bg-gray-3 {
 bg-text-3 {
 	color: #92A7C1;
 }
+
+  .bgGradian {
+    background-image: linear-gradient(to right ,rgba(255, 255, 255, 0),rgb(255 ,255 ,255 , 100%),rgb(255 ,255 ,255 , 100%) ,rgb(255, 255, 255,0)); 
+  }
+
+
+  /* .textGradiant-left{
+    background: -webkit-linear-gradient( rgba(48, 47, 47, 0.774) ,rgba(7, 7, 7, 0));
+    background-image: linear-gradient(to left,rgb(10 10 10 / 85%),rgb(183 178 178 / 41%),rgb(255, 255, 255)); 
+    border-radius: 0.5rem;
+    border-width: 2px;
+    border-image: linear-gradient(90deg,rgba(0,0,0,0.0), rgba(0, 0, 0, 0),rgba(202,202,202,0.20), rgba(202, 202, 202, 0.466)) 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }  */
+
+  .chartAnimation {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .chart1 {
+    animation: chartAnime1;
+    animation-duration: 1300ms;
+    animation-fill-mode: forwards;
+  }
+
+  .chart2 {
+    animation: chartAnime2;
+    animation-duration: 1300ms;
+    animation-fill-mode: forwards;    
+  }
+
+  .chart3 {
+    animation: chartAnime3;
+    animation-duration: 1300ms;
+    animation-fill-mode: forwards;    
+  }
+
+  .chart4 {
+    animation: chartAnime4;
+    animation-duration: 1300ms;
+    animation-fill-mode: forwards;    
+    left: 500px;
+    top: 410px;
+  }
+
+  .noteAnimation:hover {
+    cursor: pointer;
+    margin-top: -30px;
+    animation: note;
+    animation-duration: 500ms; 
+  }
+
+  .numberAnimation{
+    animation:number ;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; 
+  }
+
+  .green {
+    color: rgba(6, 199, 141, 1);
+  }
+
+  @keyframes chartAnime1 {
+    0% {
+      right: -500px;
+      top: 530px;
+    }
+
+    100%{
+      right: 540px;
+      top: 360px;
+    }
+  }
+
+  @keyframes chartAnime2 {
+    0% {
+      right: -500px;
+      top: 600px;
+    }
+
+    100%{
+      right: 600px;
+      top: 460px;
+    }
+  }
+
+  @keyframes chartAnime3 {
+    0% {
+      left: -500px;
+      top:200px
+    }
+
+    100%{
+      left: 460px;
+      top: 350px;
+    }
+  }
+
+  @keyframes chartAnime4 {
+    0% {
+      left: -500px;
+      top: 500px;
+    }
+
+    100%{
+      left: 490px;
+      top: 430px;
+    }
+  }
+
+  @keyframes note {
+    0%{
+      margin-top: -7rem;
+    }
+
+    100%{
+      margin-top: -30px;
+    }
+
+  }
+
+  @keyframes number {
+    0%{
+      margin-top: 0px;
+    }
+
+    100%{
+      margin-top: -40px;
+    }
+
+  }
+
+.transation {
+	transition: transform 1s;
+}
+.transation:hover {
+	/* transition: transform 5s; */
+  transform: scale(1.1, 1.1);
+}
+.scaleA{
+  /* transition: transform 5s; */
+  animation: scaleAni;
+  animation-duration: 2s;
+
+  transition: transform 1s;
+
+}
+
+@keyframes scaleAni {
+  0% {
+    transform: scale(0,0);
+  }
+
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+.hiddenScroll::-webkit-scrollbar  {
+	display: none;
+}
+
+.hiddenScroll{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+}
+
+.activeUserMessage {
+	margin-left: 24px;
+	margin-right: 24px;
+	height: 75px;
+}
+
+.UserMessage {
+  cursor: pointer;
+	margin-left: 4px;
+	margin-right: 4px;
+	height: 48px;
+}
+
+/* .headerBox{
+  padding-left: 24px;
+} */
+
+/* @media screen and (min-width:768) {
+  .headerBox {
+    padding-left: 166px;
+    padding-right: 166px;
+  }
+} */

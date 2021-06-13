@@ -1,0 +1,206 @@
+
+// let activePanel = 'NicheResearch'
+
+const users = [
+	{
+		id:'user-1',
+		flag:1,
+		img:'../img/Ellipse 3.png',
+		userName: 'Sansa',
+		message: '../img/Messages/1.png'
+	},
+	{
+		id:'user-2',
+		flag:2,
+		img:'../img/Ellipse 2.png',
+		userName: 'Aria',
+		message: '../img/Messages/2.png'
+	},
+	{
+		id:'user-3',
+		flag:3,
+		img:'../img/Ellipse 1.png',
+		userName: 'John',
+		message: '../img/Messages/3.png'
+	},
+	{
+		id:'user-4',
+		flag:4,
+		img:'../img/Ellipse 4.png',
+		userName: 'Sofi',
+		message: '../img/Messages/1.png'
+	},
+	{
+		id:'user-5',
+		flag:5,
+		img:'../img/Ellipse 5.png',
+		userName: 'Sara',
+		message: '../img/Messages/3.png'
+	},
+
+]
+
+let activeUser = users[2]
+// document.getElementById('userNameMessage').innerText(activeUser.userName)
+
+function resolveItem(id) {
+	const element = document.getElementById(id)
+
+	const NicheResearch = document.getElementById('NicheResearch')
+	const CompatitiveAdvantage = document.getElementById('CompatitiveAdvantage')
+	const Sourcing = document.getElementById('Sourcing')
+	const LunchingPlan = document.getElementById('LunchingPlan')
+	const borad = document.getElementById('BoardA')
+	const BoardName = document.getElementById('BoardNameA')
+	
+	if(element.id == 'CompatitiveAdvantage') {
+		element.src = '../img/Group 6485.png'
+		activePanel = 'CompatitiveAdvantage'
+		borad.src = '../img/Boards/2.png'
+		BoardName.innerHTML = 'Compatitive Advantage'
+
+		NicheResearch.src = '../img/Group 12853.svg'
+		Sourcing.src = '../img/Group 12855.svg'
+		LunchingPlan.src = '../img/Group 12856.svg'
+	}
+	else if(element.id == 'Sourcing') {
+		element.src = '../img/shop-sd.png'
+		activePanel = 'Sourcing'
+		borad.src = '../img/Boards/3.png'
+		BoardName.innerHTML = 'Sourcing'
+
+		LunchingPlan.src = '../img/Group 12856.svg'
+		NicheResearch.src = '../img/Group 12853.svg'
+		CompatitiveAdvantage.src = '../img/Group 12854.svg'
+	}
+	else if(element.id == 'LunchingPlan') {
+		element.src = '../img/lunch.png'
+		activePanel = 'LunchingPlan'
+		borad.src = '../img/Boards/4.png'
+		BoardName.innerHTML = 'Lunching Plan'
+
+		CompatitiveAdvantage.src = '../img/Group 12854.svg'
+		NicheResearch.src = '../img/Group 12853.svg'
+		Sourcing.src = '../img/Group 12855.svg'
+	}
+	else if(element.id == 'NicheResearch') {
+		// element.src = '../img/lunch.png'
+		activePanel = 'NicheResearch'
+		borad.src = '../img/Boards/1.png'
+		BoardName.innerHTML = 'Niche Research'
+
+		CompatitiveAdvantage.src = '../img/Group 12854.svg'
+		Sourcing.src = '../img/Group 12855.svg'
+		LunchingPlan.src = '../img/Group 12856.svg'
+	}
+}
+
+function resolveMessage(id ,flag) {
+	user = users.filter(u => u.id == id)
+	image = document.getElementById('mes-2')
+
+	if(user) {
+		image.src = user[0].message
+
+		image.classList.remove('scaleA')
+
+		void image.offsetWidth; 
+
+		image.classList.add('scaleA');
+
+		// image.style.animation = ' ';
+		// image.style.animation = scaleAni;
+		// image.style.animationDuration = 2;
+		userDom = document.getElementById(user[0].id)
+		userNameMessage = document.getElementById('userNameMessage')
+		// let wrapper = document.getElementById('users-pro')
+		active = document.getElementsByClassName('activeUserMessage')[0]
+		activeUser =user[0]
+		// // console.log(user[0].flag)
+		// if(user[0].flag < activeUser.flag) {
+		// 	let shift = activeUser.flag - user[0].flag
+		// 	console.log(shift)
+		// 	// wrapper.style.paddingLeft += 115 * shift
+		// }
+	
+		// if(user[0].flag > activeUser.flag) {
+		// 	let shift = user[0].flag - activeUser.flag
+		// 	console.log(shift)
+		// 	// wrapper.style.paddingRight += 115 * shift
+		// }
+
+		// active.classList.remove('activeUserMessage')
+		// active.classList.add('UserMessage')
+
+		// userDom.classList.remove('UserMessage')
+		// userDom.classList.add('activeUserMessage')
+		// activeUser = user[0]
+		let src = userDom.src
+		let id = userDom.id
+
+		
+		userDom.id= active.id
+		userDom.src = active.src
+		
+		active.src =src
+		active.id = id
+		userNameMessage.innerHTML = activeUser.userName
+		// console.log(userNameMessage)
+
+	}
+
+	// if (flag == 'R') {
+	// 	messageL[0].classList.add('MS-M')
+	// 	messageL[0].classList.remove('MS-L')
+
+	// 	messageM[0].classList.add('MS-R')
+	// 	messageM[0].classList.remove('MS-M')
+
+	// }
+	// if (flag == 'L') {
+	// 	messageR[0].classList.add('MS-M')
+	// 	messageR[0].classList.remove('MS-R')
+
+	// 	messageM[0].classList.add('MS-L')
+	// 	messageM[0].classList.remove('MS-M')
+	// }
+}
+
+
+function resolveUserName() {
+
+}
+
+let activeAnimation =false
+function addClass() {
+	var element1 = document.getElementById("chart-1");
+	var element2 = document.getElementById("chart-2");
+	var element3 = document.getElementById("chart-3");
+	var element4 = document.getElementById("chart-4");
+	if(activeAnimation){
+		element1.classList.remove("chart1")
+		element2.classList.remove("chart2")
+		element3.classList.remove("chart3")
+		element4.classList.remove("chart4")
+	}else{
+		element1.classList.add("chart1");
+		element2.classList.add("chart2");
+		element3.classList.add("chart3");
+		element4.classList.add("chart4");
+	}
+	activeAnimation =!activeAnimation
+}
+
+function overNumberStyle(el) {
+	let number =document.getElementById(el)
+	console.log(number)
+	number.classList.add('numberAnimation')
+	number.classList.add('green')
+}
+
+function outNumberStyle(el) {
+	let number =document.getElementById(el)
+	console.log(number)
+	number.classList.remove('numberAnimation')
+	number.classList.remove('green')
+}
