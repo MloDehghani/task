@@ -1,4 +1,9 @@
 
+document.getElementById('mes-2').scrollIntoView({
+	    behavior: 'smooth',
+		block:"nearest",
+		inline:"center" 
+})
 // let activePanel = 'NicheResearch'
 
 const users = [
@@ -95,7 +100,7 @@ function resolveItem(id) {
 	}
 }
 
-function resolveMessage(id ,flag) {
+function resolveMessage(id) {
 	user = users.filter(u => u.id == id)
 	image = document.getElementById('mes-2')
 
@@ -167,34 +172,70 @@ function resolveMessage(id ,flag) {
 }
 
 
-function resolveUserName() {
+function resolveUserName(id,mes) {
+	let mess = document.getElementsByClassName('mes')
+	for( var i=0 ;i < mess.length ; i++){
+		mess[i].classList.add('opacity-40')
+	}
+	let mesage = document.getElementById(mes)
+	mesage.scrollIntoView({
+    behavior: 'smooth',
+		block:"nearest",
+		inline:"center" 
+  });
 
+	let user = document.getElementById(id)
+	member = users.filter(u => u.id == id)
+	activeUser =member[0]
+	mesage.classList.remove('opacity-40')
+
+	active = document.getElementsByClassName('activeUserMessage')[0]
+	active.classList.add('UserMessage')
+	active.classList.remove('activeUserMessage')
+
+
+	user.classList.remove('UserMessage')
+	user.classList.add('activeUserMessage')
+
+	userNameMessage.innerHTML = activeUser.userName
 }
 
 let activeAnimation =false
+
+
+
+
 function addClass() {
 	var element1 = document.getElementById("chart-1");
 	var element2 = document.getElementById("chart-2");
 	var element3 = document.getElementById("chart-3");
 	var element4 = document.getElementById("chart-4");
-	if(activeAnimation){
-		element1.classList.remove("chart1")
-		element2.classList.remove("chart2")
-		element3.classList.remove("chart3")
-		element4.classList.remove("chart4")
-	}else{
-		element1.classList.add("chart1");
-		element2.classList.add("chart2");
-		element3.classList.add("chart3");
-		element4.classList.add("chart4");
-	}
-	activeAnimation =!activeAnimation
+
+	element1.classList.add("chart1");
+	element2.classList.add("chart2");
+	element3.classList.add("chart3");
+	element4.classList.add("chart4");
+
+}
+
+
+function removeClass() {
+	var element1 = document.getElementById("chart-1");
+	var element2 = document.getElementById("chart-2");
+	var element3 = document.getElementById("chart-3");
+	var element4 = document.getElementById("chart-4");
+
+	element1.classList.remove("chart1")
+	element2.classList.remove("chart2")
+	element3.classList.remove("chart3")
+	element4.classList.remove("chart4")
 }
 
 function overNumberStyle(el) {
 	let number =document.getElementById(el)
 	console.log(number)
 	number.classList.add('numberAnimation')
+	number.classList.remove('numberAnimation-reverse')
 	number.classList.add('green')
 }
 
@@ -202,5 +243,25 @@ function outNumberStyle(el) {
 	let number =document.getElementById(el)
 	console.log(number)
 	number.classList.remove('numberAnimation')
+	number.classList.add('numberAnimation-reverse')
 	number.classList.remove('green')
+}
+
+function scrolldiv(id) {
+  var elem = document.getElementById(id);
+  elem.scrollIntoView({
+    behavior: 'smooth' 
+  });
+}
+
+var modal = document.getElementById("myModal");
+
+function openModel() {
+	 modal.style.display = "block";
+}
+
+window.onclick = function(event) {
+  // if (event.target == modal) {
+    modal.style.display = "none";
+  // }
 }

@@ -115,11 +115,22 @@ bg-text-3 {
     animation-duration: 500ms; 
   }
 
+  .noteAnimation {
+    animation: note-reverse;
+    animation-duration: 500ms;
+  }
+
   .numberAnimation{
     animation:number ;
     animation-duration: 500ms;
-    animation-fill-mode: forwards; 
+    animation-fill-mode:forwards;
   }
+
+  .numberAnimation-reverse{
+    animation:number-reverse ;
+    animation-duration: 500ms;
+  }
+
 
   .green {
     color: rgba(6, 199, 141, 1);
@@ -127,49 +138,49 @@ bg-text-3 {
 
   @keyframes chartAnime1 {
     0% {
-      right: -500px;
-      top: 530px;
+      right: -100%;
+      top: 30%;
     }
 
     100%{
-      right: 540px;
-      top: 360px;
+      right: 10%;
+      top: 5%;
     }
   }
 
   @keyframes chartAnime2 {
     0% {
-      right: -500px;
-      top: 600px;
+      right: -100%;
+      top: 4%;
     }
 
     100%{
-      right: 600px;
-      top: 460px;
+      right: 20%;
+      top: 7%;
     }
   }
 
   @keyframes chartAnime3 {
     0% {
-      left: -500px;
-      top:200px
+      left: -100;
+      top:30%
     }
 
     100%{
-      left: 460px;
-      top: 350px;
+      left: 10%;
+      top: 5%;
     }
   }
 
   @keyframes chartAnime4 {
     0% {
-      left: -500px;
-      top: 500px;
+      left: -100%;
+      top: 4%;
     }
 
     100%{
-      left: 490px;
-      top: 430px;
+      left: 20%;
+      top: 7%;
     }
   }
 
@@ -184,6 +195,17 @@ bg-text-3 {
 
   }
 
+  @keyframes note-reverse {
+    0%{
+      margin-top: -30px;
+    }
+    
+    100%{
+      margin-top: -7rem;
+    }
+
+  }
+
   @keyframes number {
     0%{
       margin-top: 0px;
@@ -191,6 +213,17 @@ bg-text-3 {
 
     100%{
       margin-top: -40px;
+    }
+
+  }
+
+  @keyframes number-reverse {
+    0%{
+      margin-top: -40px;
+    }
+    
+    100%{
+      margin-top: 0px;
     }
 
   }
@@ -248,9 +281,60 @@ bg-text-3 {
   padding-left: 24px;
 } */
 
-/* @media screen and (min-width:768) {
-  .headerBox {
-    padding-left: 166px;
-    padding-right: 166px;
+@media (min-width:768) {
+  .md/:h-472-px {
+    height: 472px;
+  }
+}
+
+/* @screen md {
+  .mt-100-px {
+    margin-top : 100px; 
   }
 } */
+
+.h-472-px {
+  height: 472px;
+}
+
+.mt-68-px {
+  margin-top: 68px;
+}
+
+
+.numberStyle {
+  font-size: 140px;
+   -webkit-text-stroke: 1px #92A7C1;
+   letter-spacing: 4px;
+}
+
+
+.modal {
+  /* display: none; Hidden by default */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
