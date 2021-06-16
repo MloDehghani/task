@@ -1,9 +1,14 @@
 
-document.getElementById('mes-2').scrollIntoView({
-	    behavior: 'smooth',
-		block:"nearest",
-		inline:"center" 
-})
+// document.getElementById('mes-2').scrollIntoView({
+// 	    // behavior: 'smooth',
+// 		block:"nearest",
+// 		inline:"center" 
+// })
+
+// document.getElementsByTagName('body').scrollIntoView({
+// 		block:"nearest",
+// 		inline:"center" 
+// })
 // let activePanel = 'NicheResearch'
 
 const users = [
@@ -64,7 +69,7 @@ function resolveItem(id) {
 		borad.src = '../img/Boards/2.png'
 		BoardName.innerHTML = 'Compatitive Advantage'
 
-		NicheResearch.src = '../img/Group 12853.svg'
+		NicheResearch.src = '../img/Group 12859.svg'
 		Sourcing.src = '../img/Group 12855.svg'
 		LunchingPlan.src = '../img/Group 12856.svg'
 	}
@@ -75,7 +80,7 @@ function resolveItem(id) {
 		BoardName.innerHTML = 'Sourcing'
 
 		LunchingPlan.src = '../img/Group 12856.svg'
-		NicheResearch.src = '../img/Group 12853.svg'
+		NicheResearch.src = '../img/Group 12859.svg'
 		CompatitiveAdvantage.src = '../img/Group 12854.svg'
 	}
 	else if(element.id == 'LunchingPlan') {
@@ -85,11 +90,11 @@ function resolveItem(id) {
 		BoardName.innerHTML = 'Lunching Plan'
 
 		CompatitiveAdvantage.src = '../img/Group 12854.svg'
-		NicheResearch.src = '../img/Group 12853.svg'
+		NicheResearch.src = '../img/Group 12859.svg'
 		Sourcing.src = '../img/Group 12855.svg'
 	}
 	else if(element.id == 'NicheResearch') {
-		// element.src = '../img/lunch.png'
+		element.src = '../img/Group 12853.svg'
 		activePanel = 'NicheResearch'
 		borad.src = '../img/Boards/1.png'
 		BoardName.innerHTML = 'Niche Research'
@@ -233,7 +238,7 @@ function removeClass() {
 
 function overNumberStyle(el) {
 	let number =document.getElementById(el)
-	console.log(number)
+	// console.log(number)
 	number.classList.add('numberAnimation')
 	number.classList.remove('numberAnimation-reverse')
 	number.classList.add('green')
@@ -241,7 +246,7 @@ function overNumberStyle(el) {
 
 function outNumberStyle(el) {
 	let number =document.getElementById(el)
-	console.log(number)
+	// console.log(number)
 	number.classList.remove('numberAnimation')
 	number.classList.add('numberAnimation-reverse')
 	number.classList.remove('green')
@@ -270,6 +275,11 @@ function scrolldiv(id) {
 function visibleModal() {
 	document.getElementById('modal1').classList.remove('hidden')
 	document.getElementById('modal').classList.add('modal')
+	document.getElementById('modal1').scrollIntoView({
+		behavior: 'smooth',
+		block:"center",
+		inline:"center" 
+	})
 }
 
 // window.onclick = function(event) {

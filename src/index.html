@@ -15,15 +15,16 @@
       <div class="flex fixed top-0 z-30 justify-between items-baseline px-6 lg:px-10 2xl:px-40  w-full py-6 mb-3 bg-white shadow-sm ">
         <img class="h-5  md:h-6"  src="../img/logo.svg" alt="">
 
-        <div class="hidden md:flex  visible text-sm items-baseline ">
+        <div class="hidden lg:flex  visible text-sm items-baseline ">
           <a onclick="scrolldiv('howItWork')" class="mx-3 text-gray-darker cursor-pointer hover:text-main-set ">How it works</a>
           <a onclick="scrolldiv('proposalSection')"  class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Proposal Sections</a>
           <a onclick="scrolldiv('Collabrative')"  class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Collabrative Team work!</a>
           <a onclick="scrolldiv('Compairideas')" class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Compair ideas</a>
+          <a id="buttonModal2" onclick="visibleModal()"  class="mx-3 ml-5 text-sm text-white px-4 rounded-xl cursor-pointer " style="padding-top: 7px; padding-bottom: 7px; background-color: #06C78D;">get demo</a>
         </div>
       </div>
 
-      <div class="relative text-lg mx-2  h-96 gradianGreen rounded-xl mt-20 md:h-472p md:mx-3 md:mt-32 ">
+      <div class="relative text-lg mx-2  h-96 gradianGreen rounded-xl mt-68P md:h-472p md:mx-3 md:mt-100P ">
         <div class="flex text-white justify-center">
           <div class="text-center object-center text-sm">
             <h3 class="font-bold mt-8 text-xl md:text-3xl md:mt-14" style="line-height: 51.5px;">How to be sucessfull on Amazon?</h3>
@@ -36,7 +37,7 @@
            
             <div class="flex justify-center ">
               <div id="playerWrapper" class="hidden absolute z-50 top-2/4 ">
-                  <iframe id="player" type="text/html" class="h-40 md:h-52 lg:h-72" width="700"
+                  <iframe id="player" type="text/html" class="h-30 md:h-52 lg:h-96" width="500"
                     src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
                     frameborder="0"></iframe>
                 
@@ -91,9 +92,9 @@
           <div class="lg:flex justify-between mb-auto pt-10 xl:pading-t-50px ">     
             <div class="mr-4 w-full lg:w-3/12">
               <div class="z-0 flex justify-center  ">
-                <span id="number1" class="text-white text-stroke-gray-500 font-bold  numberStyle">01</span>
+                <span id="number1" class="text-white  font-bold  numberStyle">01</span>
               </div>
-              <div  class=" relative text-center z-20  border border-1 w py-4 px-5 -mt-28 bg-white shadow-lg rounded-2xl noteAnimation" onmouseover="overNumberStyle('number1')" onmouseout="outNumberStyle('number1')">
+              <div  class=" relative text-center z-20 border-gray-50 border border-1 w py-4 px-5 -mt-28 bg-white shadow-sm rounded-2xl noteAnimation" onmouseover="overNumberStyle('number1')" onmouseout="outNumberStyle('number1')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Make Proposal</h4>
                 <p class=" text-gray-700 text-lg lg:mx-1 mb-8  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Having a good resume on hand when going on the job hunt is crucial, and will make your search a lot easier. Even if you're not looking
@@ -105,7 +106,7 @@
               <div class="z-0 flex justify-center  ">
                 <span id="number2" class="text-white text-stroke-gray-500 font-bold numberStyle">02</span>
               </div>
-              <div  class=" relative text-center z-20  border border-1 w py-4 px-5 -mt-28  bg-white shadow-lg rounded-2xl noteAnimation" onmouseover="overNumberStyle('number2')" onmouseout="outNumberStyle('number2')">
+              <div  class=" relative text-center z-20  border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" onmouseover="overNumberStyle('number2')" onmouseout="outNumberStyle('number2')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Get Help</h4>
                 <p class=" text-gray-700 text-lg lg:mx-1 mb-8  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Having a good resume on hand when going on the job hunt is crucial, and will make your search a lot easier. Even if you're not looking
@@ -117,7 +118,7 @@
               <div class="z-0 flex justify-center  ">
                 <span id="number3" class="text-white text-stroke-gray-500 font-bold numberStyle" >03</span>
               </div>
-              <div  class=" relative text-center z-20  border border-1 w py-4 px-5 -mt-28  bg-white shadow-lg rounded-2xl noteAnimation" onmouseover="overNumberStyle('number3')" onmouseout="outNumberStyle('number3')">
+              <div  class=" relative text-center z-20  border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" onmouseover="overNumberStyle('number3')" onmouseout="outNumberStyle('number3')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Validate & Analysis</h4>
                 <p class=" text-gray-700 text-lg lg:mx-1 mb-8  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Having a good resume on hand when going on the job hunt is crucial, and will make your search a lot easier. Even if you're not looking
@@ -129,7 +130,7 @@
               <div class="z-0 flex justify-center  ">
                 <span id="number4" class="text-white text-stroke-gray-500 font-bold numberStyle">04</span>
               </div>
-              <div  class=" relative text-center z-20  border border-1 w py-4 px-5 -mt-28  bg-white shadow-lg rounded-2xl noteAnimation" onmouseover="overNumberStyle('number4')" onmouseout="outNumberStyle('number4')">
+              <div  class=" relative text-center z-20   border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" onmouseover="overNumberStyle('number4')" onmouseout="outNumberStyle('number4')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Make Money!</h4>
                 <p class=" text-gray-700 text-lg mx-6 lg:mx-1  mb-8  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Having a good resume on hand when going on the job hunt is crucial, and will make your search a lot easier. Even if you're not looking
@@ -273,7 +274,7 @@
             <img id="mes-3" class="transation opacity-40 mr-4 mes " src="../img/Messages/3.png" alt="">
             <img id="mes-4" class=" transation opacity-40 mes" src="../img/Messages/3.png" alt="">
 
-            <img id="mes-5" class=" opacity-40 mr-4 " src="../img/Messages/3.png" alt="">
+            <img id="mes-5" class=" opacity-40 ml-4 " src="../img/Messages/3.png" alt="">
 
           </div> 
         </div>
@@ -296,20 +297,21 @@
       <footer class="pb-14 flex justify-center bg-gray-9 bg-dark " >
         <div class="w-8/12 lg:w-10/12">
           <div class="lg:flex justify-between mt-12 items-baseline">
-            <h5 class=" text-center lg:text-left italic text-2xl " style="color: rgba(6, 199, 141, 1); font-weight: 700; line-height: 28.13px;">SELLGURU</h5>
+            <!-- <h5 class=" text-center lg:text-left italic text-2xl " style="color: rgba(6, 199, 141, 1); font-weight: 700; line-height: 28.13px;">SELLGURU</h5> -->
+            <img src="../img/logo.svg" alt="">
             <div class=" lg:hidden border-t border-white my-8 opacity-10"></div>
             <div class="text-center lg:text-left">
               <a class="md:mr-14 text-white font-DmSans " style=" font-size: 22px;" href="#">Ready to get Demo?</a>
-              <button class="mt-5 lg:mt-0 text-white primary-bg-green  rounded-lg" style="font-size: 17px;padding:14px 41px ; ">Get started</button>
+              <button id="buttonModal3" onclick="visibleModal()" class="mt-5 lg:mt-0 text-white primary-bg-green  rounded-lg" style="font-size: 17px;padding:14px 41px ; ">Get started</button>
             </div>
           </div>
   
           <div class="border-t border-white mt-10 mb-11 opacity-10"></div>
           <div class="text-center lg:text-left lg:flex items-baseline">
             <label for="email" class="text-white font-DmSans " style="font-size: 22px; ">Subscribe to our newsletter</label>
-            <div class="lg:mx-16 lg:flex ">
+            <div class="lg:mx-8 lg:flex ">
               <input id="email" class="py-4 px-2 my-5 lg:my-0 w-9/12 lg:w-auto text-main-set fill-dark  border-b outline-none bg-dark" type="email" placeholder="Email address" >
-              <button class="rounded-tr-lg primary-bg-green " style="padding: 22px;">
+              <button onclick="alert('done')" class="rounded-tr-lg primary-bg-green " style="padding: 22px;">
                 <img src="../img/ArrowRight.svg" alt="">
               </button>
             </div>
@@ -334,7 +336,7 @@
 
     </div>
     <script src="./main.js"></script>
-    <script src="../public/player.js"></script>
+    <script src="./player.js"></script>
   </body>
 
   <style>

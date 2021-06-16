@@ -38,6 +38,7 @@ module.exports = {
     extend: {
       height:{
         '74p': '74px',
+        '100P': '100px',
         '130p': '130px',
         '170P': '170px', 
         '214p': '214px',
@@ -46,6 +47,12 @@ module.exports = {
         '448P' : '448px',
         '472p': '472px',
         '568p': '568px'
+      },
+
+      margin: {
+        '68P': '68px',
+        '70P':'70px',
+        '100P': '100px',
       },
 
       fontSize: {
