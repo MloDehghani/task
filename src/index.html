@@ -12,7 +12,7 @@
   </head>
   <body class="font-body">
     <div class="  relative overflow-x-hidden min-w-screen-xl font-display">
-      <div class="flex fixed top-0 z-50 justify-between items-baseline px-6 lg:px-10 2xl:px-40  w-full py-6 mb-3 bg-white shadow-sm ">
+      <div class="flex fixed top-0 z-30 justify-between items-baseline px-6 lg:px-10 2xl:px-40  w-full py-6 mb-3 bg-white shadow-sm ">
         <img class="h-5  md:h-6"  src="../img/logo.svg" alt="">
 
         <div class="hidden md:flex  visible text-sm items-baseline ">
@@ -32,20 +32,51 @@
             SellGuru help you to plan your investment in Amazon business and Make your Poposal with easy to fill boards and compair it.
             </p>
 
-            <button onclick="openModel()" onmousemove="addClass()" onmouseout="removeClass()" class="rounded-lg text-sm text-main-set mb-14 shadow-sm bg-white px-6" style="margin-top: 70px; padding-top: 10px; padding-bottom: 10px;">Request free demo</button>
+            <button id="buttonModal1" onclick="visibleModal()" onmousemove="addClass()" onmouseout="removeClass()" class="rounded-lg text-sm text-main-set mb-14 shadow-sm bg-white px-6" style="margin-top: 70px; padding-top: 10px; padding-bottom: 10px;">Request free demo</button>
+           
+            <div class="flex justify-center ">
+              <div id="playerWrapper" class="hidden absolute z-50 top-2/4 ">
+                  <iframe id="player" type="text/html" class="h-40 md:h-52 lg:h-72" width="700"
+                    src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                    frameborder="0"></iframe>
+                
+              </div>
 
+            </div>
 
+            <div class="flex text-left  justify-center">
+              <div id="modal1" class="absolute hidden px-6 py-8 shadow-md z-50 rounded-xl top-2/4 w-11/12 sm:w-8/12 lg:w-5/12 2xl:w-3/12  bg-white">
+                <div class="flex justify-between items-center">
+                  <h4 class="text-lg text-left text-gray-700">Request Free Demo</h4>
+                  <img class="p-4 cursor-pointer bg-gray-50 rounded-xl" src="../img/Vector.svg" alt="">
+                </div>
+
+                <div class="pt-10">
+                  <label class="text-base  mb-2" style="color:#566E88;" for="inputName">Name</label>
+                  <input class="py-3 text-gray-800 shadow-md w-full mt-2 rounded-lg px-4 border border-main-set" id="inputName" name="name" placeholder="Sina Oshaghi" type="text">
+                </div>
+
+                <div class="pt-6">
+                  <label class="text-base  mb-2" style="color:#566E88;" for="inputEmail">Email</label>
+                  <input class="py-3 text-gray-800 shadow-md w-full mt-2 rounded-lg px-4 border border-main-set" id="inputEmail" name="name" placeholder="UX designer, Product designer" type="email">
+                </div>   
+                
+                <div class="flex justify-center">
+                  <button id="submitButton" class="py-3 px-7 rounded-2xl mt-8 text-white bg-main-set">Done</button>
+                </div>
+              </div>
+            </div>
 
             <div class="relative flex justify-center ">
               <img class="absolute h-130p md:h-300p top-0 mx-auto " src="../img/chrome.png" alt="">
 
               <div class=" absolute top-6  md:top-12 rounded-lg h-74p md:h-170P " style=" width: 15%; background-color: rgba(0, 155, 126, 0.3); filter: blur(1px);">
               </div>
-              <div class="absolute top-1  md:top-12 ">
-                <div class="flex justify-center items-center">
-                  <img class="mt-8 md:mb-6 h-8 md:h-74p " src="../img/play.png" alt="">
+              <div  onclick="showVideo()" class="absolute top-1  md:top-12 ">
+                <div  class="flex justify-center items-center">
+                  <img id="showWraper"  onclick="showVideo()" class="mt-8 cursor-pointer md:mb-6 h-8 md:h-74p " src="../img/play.png" alt="">
                 </div>
-                <a class="text-6px md:text-base md:font-bold shadow-sm" href="https://www.youtube.com/watch?v=10aZTvGX8Fs">Watch Video</a>
+                <a  class="text-6px md:text-base md:font-bold shadow-sm" >Watch Video</a>
               </div>
 
             </div>
@@ -296,23 +327,14 @@
         <img class="absolute top-96 h-20 lg:h-44 chartAnimation" style="left: -500px;" id="chart-4" name="chart"  src="../img/Frame.png" alt="">
       </div>
 
-                  <!-- modal -->
 
-    <!-- <div id="myModal" class="modal">
+      <div id="modal" class="absolute top-0 z-40" >
 
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
       </div>
-
-    </div> -->
-
-
-
-            <!-- modal -->
 
     </div>
     <script src="./main.js"></script>
+    <script src="../public/player.js"></script>
   </body>
 
   <style>
