@@ -181,13 +181,16 @@ function resolveUserName(id,mes) {
 	let mess = document.getElementsByClassName('mes')
 	for( var i=0 ;i < mess.length ; i++){
 		mess[i].classList.add('opacity-40')
+		mess[i].classList.remove('transation')
 	}
 	let mesage = document.getElementById(mes)
 	mesage.scrollIntoView({
-    behavior: 'smooth',
+		behavior: 'smooth',
 		block:"nearest",
 		inline:"center" 
-  });
+	});
+
+	mesage.classList.add('transation')
 
 	let user = document.getElementById(id)
 	member = users.filter(u => u.id == id)
@@ -195,6 +198,7 @@ function resolveUserName(id,mes) {
 	mesage.classList.remove('opacity-40')
 
 	active = document.getElementsByClassName('activeUserMessage')[0]
+
 	active.classList.add('UserMessage')
 	active.classList.remove('activeUserMessage')
 
