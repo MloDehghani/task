@@ -254,14 +254,28 @@ function scrolldiv(id) {
   });
 }
 
-var modal = document.getElementById("myModal");
+// var modal = document.getElementById("myModal");
 
-function openModel() {
-	 modal.style.display = "block";
+// function openModel() {
+// 	 modal.style.display = "block";
+// }
+
+// window.onclick = function(event) {
+//   // if (event.target == modal) {
+//     modal.style.display = "none";
+//   // }
+// }
+
+
+function visibleModal() {
+	document.getElementById('modal1').classList.remove('hidden')
+	document.getElementById('modal').classList.add('modal')
 }
 
-window.onclick = function(event) {
-  // if (event.target == modal) {
-    modal.style.display = "none";
-  // }
-}
+// window.onclick = function(event) {
+// 	let wrapper = document.getElementById('buttonModal1')
+//   if (event.target != wrapper) {
+//     document.getElementById('modal1').classList.add('hidden')
+//     document.getElementById('modal').classList.remove('modal')
+//   }
+// }
