@@ -110,7 +110,7 @@ bg-text-3 {
 
   .noteAnimation:hover {
     cursor: pointer;
-    margin-top: -30px;
+    margin-top: 10px;
     animation: note;
     animation-duration: 500ms; 
   }
@@ -190,14 +190,14 @@ bg-text-3 {
     }
 
     100%{
-      margin-top: -30px;
+      margin-top: 10px;
     }
 
   }
 
   @keyframes note-reverse {
     0%{
-      margin-top: -30px;
+      margin-top: 10px;
     }
     
     100%{
@@ -212,14 +212,14 @@ bg-text-3 {
     }
 
     100%{
-      margin-top: -40px;
+      margin-top: -60px;
     }
 
   }
 
   @keyframes number-reverse {
     0%{
-      margin-top: -40px;
+      margin-top: -60px;
     }
     
     100%{

@@ -240,20 +240,46 @@ function removeClass() {
 	element4.classList.remove("chart4")
 }
 
-function overNumberStyle(el) {
-	let number =document.getElementById(el)
+function overNumberStyle(id) {
+	let number =document.getElementById(id)
 	// console.log(number)
 	number.classList.add('numberAnimation')
 	number.classList.remove('numberAnimation-reverse')
 	number.classList.add('green')
+
+	if(id == 'number1') {
+		number.src = '../img/numbers/01.svg'
+	}
+	if(id == 'number2') {
+		number.src = '../img/numbers/02.svg'
+	}
+	if(id == 'number3') {
+		number.src = '../img/numbers/03.svg'
+	}
+	if(id == 'number4') {
+		number.src = '../img/numbers/04.svg'
+	}	
 }
 
-function outNumberStyle(el) {
-	let number =document.getElementById(el)
+function outNumberStyle(id) {
+	let number =document.getElementById(id)
 	// console.log(number)
 	number.classList.remove('numberAnimation')
 	number.classList.add('numberAnimation-reverse')
 	number.classList.remove('green')
+
+	if(id == 'number1') {
+		number.src = '../img/numbers/01 (Stroke).svg'
+	}
+	if(id == 'number2') {
+		number.src = '../img/numbers/02 (Stroke).svg'
+	}
+	if(id == 'number3') {
+		number.src = '../img/numbers/03 (Stroke).svg'
+	}
+	if(id == 'number4') {
+		number.src = '../img/numbers/04 (Stroke).svg'
+	}		
 }
 
 function scrolldiv(id) {
@@ -293,3 +319,19 @@ function visibleModal() {
 //     document.getElementById('modal').classList.remove('modal')
 //   }
 // }
+
+function hoverNumber(id) {
+	const number = document.getElementById(id)
+	if(id == 'number1') {
+		number.src = '../01.svg'
+	}
+	if(id == 'number2') {
+		number.src = '../02.svg'
+	}
+	if(id == 'number3') {
+		number.src = '../03.svg'
+	}
+	if(id == 'number4') {
+		number.src = '../04.svg'
+	}			
+}
