@@ -57,6 +57,10 @@ module.exports = {
 
       fontSize: {
         '6px' : '6px'
+      },
+
+      screens : {
+        '3xl' : '2000px'
       }
     },
   },
