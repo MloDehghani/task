@@ -48,7 +48,7 @@ function onPlayerStateChange(event) {
 
 function showVideo() {
   document.getElementById('playerWrapper').classList.remove('hidden')
-  document.getElementById('player').src ='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com'
+  document.getElementById('player').src ='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1'
   document.getElementById('modal').classList.add('modal')
 }
 
@@ -73,7 +73,7 @@ window.onclick = function(event) {
     document.getElementById('playerWrapper').classList.add('hidden')
     document.getElementById('modal1').classList.add('hidden')
     document.getElementById('modal').classList.remove('modal')
-    document.getElementById('player').src =' '
+    document.getElementById('player').src ='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1'
     // event.target.stopVideo()
     // document.getElementById('playerWrapper')
   }

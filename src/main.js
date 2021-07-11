@@ -1,14 +1,14 @@
 
-// document.getElementById('mes-2').scrollIntoView({
-// 	    // behavior: 'smooth',
-// 		block:"nearest",
-// 		inline:"center" 
-// })
+document.getElementById('mes-2').scrollIntoView({
+	    // behavior: 'smooth',
+		block:"nearest",
+		inline:"center" 
+})
 
-// document.getElementsByTagName('body').scrollIntoView({
-// 		block:"nearest",
-// 		inline:"center" 
-// })
+document.getElementsByTagName('body').scrollIntoView({
+		block:"nearest",
+		inline:"center" 
+})
 // let activePanel = 'NicheResearch'
 
 const users = [
@@ -69,9 +69,9 @@ function resolveItem(id) {
 		borad.src = '../img/Boards/2.png'
 		BoardName.innerHTML = 'Compatitive Advantage'
 
-		NicheResearch.src = '../img/Group 12859.svg'
-		Sourcing.src = '../img/Group 12855.svg'
-		LunchingPlan.src = '../img/Group 12856.svg'
+		NicheResearch.src = '../img/Group 12859.png'
+		Sourcing.src = '../img/Group 12855.png'
+		LunchingPlan.src = '../img/Group 12856.png'
 	}
 	else if(element.id == 'Sourcing') {
 		element.src = '../img/shop-sd.png'
@@ -79,9 +79,9 @@ function resolveItem(id) {
 		borad.src = '../img/Boards/3.png'
 		BoardName.innerHTML = 'Sourcing'
 
-		LunchingPlan.src = '../img/Group 12856.svg'
-		NicheResearch.src = '../img/Group 12859.svg'
-		CompatitiveAdvantage.src = '../img/Group 12854.svg'
+		LunchingPlan.src = '../img/Group 12856.png'
+		NicheResearch.src = '../img/Group 12859.png'
+		CompatitiveAdvantage.src = '../img/Group 12854.png'
 	}
 	else if(element.id == 'LunchingPlan') {
 		element.src = '../img/lunch.png'
@@ -89,19 +89,19 @@ function resolveItem(id) {
 		borad.src = '../img/Boards/4.png'
 		BoardName.innerHTML = 'Lunching Plan'
 
-		CompatitiveAdvantage.src = '../img/Group 12854.svg'
-		NicheResearch.src = '../img/Group 12859.svg'
-		Sourcing.src = '../img/Group 12855.svg'
+		CompatitiveAdvantage.src = '../img/Group 12854.png'
+		NicheResearch.src = '../img/Group 12859.png'
+		Sourcing.src = '../img/Group 12855.png'
 	}
 	else if(element.id == 'NicheResearch') {
-		element.src = '../img/Group 12853.svg'
+		element.src = '../img/Group 12853.png'
 		activePanel = 'NicheResearch'
 		borad.src = '../img/Boards/1.png'
 		BoardName.innerHTML = 'Niche Research'
 
-		CompatitiveAdvantage.src = '../img/Group 12854.svg'
-		Sourcing.src = '../img/Group 12855.svg'
-		LunchingPlan.src = '../img/Group 12856.svg'
+		CompatitiveAdvantage.src = '../img/Group 12854.png'
+		Sourcing.src = '../img/Group 12855.png'
+		LunchingPlan.src = '../img/Group 12856.png'
 	}
 }
 
@@ -248,16 +248,16 @@ function overNumberStyle(id) {
 	number.classList.add('green')
 
 	if(id == 'number1') {
-		number.src = '../img/numbers/01.svg'
+		number.src = '../img/numbers/01.png'
 	}
 	if(id == 'number2') {
-		number.src = '../img/numbers/02.svg'
+		number.src = '../img/numbers/02.png'
 	}
 	if(id == 'number3') {
-		number.src = '../img/numbers/03.svg'
+		number.src = '../img/numbers/03.png'
 	}
 	if(id == 'number4') {
-		number.src = '../img/numbers/04.svg'
+		number.src = '../img/numbers/04.png'
 	}	
 }
 
@@ -269,16 +269,16 @@ function outNumberStyle(id) {
 	number.classList.remove('green')
 
 	if(id == 'number1') {
-		number.src = '../img/numbers/01 (Stroke).svg'
+		number.src = '../img/numbers/01 (Stroke).png'
 	}
 	if(id == 'number2') {
-		number.src = '../img/numbers/02 (Stroke).svg'
+		number.src = '../img/numbers/02 (Stroke).png'
 	}
 	if(id == 'number3') {
-		number.src = '../img/numbers/03 (Stroke).svg'
+		number.src = '../img/numbers/03 (Stroke).png'
 	}
 	if(id == 'number4') {
-		number.src = '../img/numbers/04 (Stroke).svg'
+		number.src = '../img/numbers/04 (Stroke).png'
 	}		
 }
 
@@ -323,15 +323,15 @@ function visibleModal() {
 function hoverNumber(id) {
 	const number = document.getElementById(id)
 	if(id == 'number1') {
-		number.src = '../01.svg'
+		number.src = '../01.png'
 	}
 	if(id == 'number2') {
-		number.src = '../02.svg'
+		number.src = '../02.png'
 	}
 	if(id == 'number3') {
-		number.src = '../03.svg'
+		number.src = '../03.png'
 	}
 	if(id == 'number4') {
-		number.src = '../04.svg'
+		number.src = '../04.png'
 	}			
 }
