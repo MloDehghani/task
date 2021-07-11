@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+      <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <link rel="stylesheet" href="../dist/tailwind.css">
     <link href="../dist/main.css" rel="stylesheet">
     
@@ -17,15 +26,15 @@
 
         <div class="hidden lg:flex  visible text-sm items-baseline ">
           <a onclick="scrolldiv('howItWork')" class="mx-3 text-gray-darker cursor-pointer hover:text-main-set ">How it works</a>
-          <a onclick="scrolldiv('proposalSection')"  class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Proposal Sections</a>
+          <a onclick="scrolldiv('proposalSection')"  class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Simulate your Future</a>
           <a onclick="scrolldiv('Collabrative')"  class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Collabrative Team work!</a>
           <a onclick="scrolldiv('Compairideas')" class="mx-3 text-gray-darker cursor-pointer hover:text-main-set">Compair ideas</a>
-          <a id="buttonModal2" onclick="visibleModal()"  class="mx-3 ml-5 text-sm text-white px-4 rounded-xl cursor-pointer " style="padding-top: 7px; padding-bottom: 7px; background-color: #06C78D;">get demo</a>
+          <a id="buttonModal2" onclick="visibleModal()"  class="mx-3 ml-5 text-sm text-white px-4 rounded-xl buttonColor cursor-pointer " style="padding-top: 7px; padding-bottom: 7px; ">get demo</a>
         </div>
       </div>
 
-      <div class="relative text-lg mx-2  h-96 gradianGreen rounded-xl cursor-pointer mt-68P md:h-472p md:mx-3 md:mt-100P " onmousemove="addClass()" onmouseout="removeClass()">
-        <div class="flex text-white justify-center">
+      <div class="relative text-lg mx-2  h-96 primary-bg rounded-xl cursor-pointer mt-68P md:h-472p md:mx-3 md:mt-100P " onmousemove="addClass()" onmouseout="removeClass()">
+        <div class="flex primary-text justify-center">
           <div class="text-center object-center text-sm">
             <h3 class="font-bold mt-8 text-xl md:text-3xl md:mt-14" style="line-height: 51.5px;">How to be sucessfull on Amazon?</h3>
             <p class="mt-5">On world, <span class="font-bold">planning!</span></p>
@@ -33,7 +42,7 @@
             SellGuru help you to plan your investment in Amazon business and Make your Poposal with easy to fill boards and compair it.
             </p>
 
-            <button id="buttonModal1" onclick="visibleModal()" onmousemove="addClass()" onmouseout="removeClass()" class="rounded-lg text-sm text-main-set mb-14 shadow-sm bg-white px-6" style="margin-top: 70px; padding-top: 10px; padding-bottom: 10px;">Request free demo</button>
+            <button id="buttonModal1" onclick="visibleModal()" onmousemove="addClass()" onmouseout="removeClass()" class="rounded-lg text-sm primary-text mb-14 shadow-sm bg-white px-6" style="margin-top: 70px; padding-top: 10px; padding-bottom: 10px;">Request free demo</button>
            
             <div class="flex justify-center ">
               <div id="playerWrapper" class="hidden absolute z-50 top-2/4 ">
@@ -58,12 +67,12 @@
                 </div>
 
                 <div class="pt-6">
-                  <label class="text-base  mb-2" style="color:#566E88;" for="inputEmail">Email</label>
-                  <input class="py-3 text-gray-800 shadow-md w-full mt-2 rounded-lg px-4 border border-main-set" id="inputEmail" name="name" placeholder="UX designer, Product designer" type="email">
+                  <label  class="text-base  mb-2" style="color:#566E88;" for="inputEmail">Email</label>
+                  <input class="py-3 text-gray-800 shadow-md w-full mt-2 rounded-lg px-4 border border-main-set" id="inputEmail" name="name" placeholder="simple@Email.com" type="email">
                 </div>   
                 
                 <div class="flex justify-center">
-                  <button id="submitButton" class="py-3 px-7 rounded-2xl mt-8 text-white bg-main-set">Done</button>
+                  <button id="submitButton" onclick="saveToFireBase()" class="py-3 px-7 rounded-2xl mt-8 text-white bg-main-set">Done</button>
                 </div>
               </div>
             </div>
@@ -97,7 +106,7 @@
               </div>
               <div  class=" relative text-center z-20 border-gray-50 border border-1 w py-4 px-5 -mt-28 bg-white shadow-sm rounded-2xl noteAnimation" style="min-height: 280px;" onmouseover="overNumberStyle('number1')" onmouseout="outNumberStyle('number1')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Write your Proposal</h4>
-                <p class=" text-gray-700 text-lg lg:mx-1 mb-8  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
+                <p class=" text-gray-700 text-lg lg:mx-1 my-auto text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Easy to fill boards are ready to helps you and educate you how an Amazon business should be planned. Guarantee your success only with a Plan
                 </p>
               </div>
@@ -110,7 +119,7 @@
               </div>
               <div  class=" relative text-center z-20  border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" style="min-height: 280px;" onmouseover="overNumberStyle('number2')" onmouseout="outNumberStyle('number2')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Get Help</h4>
-                <p class=" text-gray-700 text-lg lg:mx-1 mb-8  text-center" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
+                <p class=" text-gray-700 text-lg lg:mx-1 my-auto  text-center" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Need help?<br> We have Education, Mentors, Coaches, Freelances on your service
                 </p>
               </div>
@@ -123,7 +132,7 @@
               </div>
               <div  class=" relative text-center z-20  border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" style="min-height: 280px;" onmouseover="overNumberStyle('number3')" onmouseout="outNumberStyle('number3')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Validate & Analyze</h4>
-                <p class=" text-gray-700 text-lg lg:mx-1 mb-8  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
+                <p class=" text-gray-700 text-lg lg:mx-1 my-auto  text-left" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Validate your Plan with our AI engine and experts. Simulate your outcomes and look at your retail future beforehand. 
                 </p>
               </div>
@@ -134,9 +143,9 @@
                 <!-- <span id="number4" class="text-white text-stroke-gray-500 font-bold numberStyle">04</span> -->
                 <img id="number4" class="w-max  mb-16" src="../img/numbers/04 (Stroke).png" alt="">
               </div>
-              <div  class=" relative text-center z-20  border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" style="min-height: 280px;" onmouseover="overNumberStyle('number4')" onmouseout="outNumberStyle('number4')">
+              <div  class=" relative text-center z-20 object-center  border border-1 border-gray-50 w py-4 px-5 -mt-28  bg-white shadow-sm rounded-2xl noteAnimation" style="min-height: 280px;" onmouseover="overNumberStyle('number4')" onmouseout="outNumberStyle('number4')">
                 <h4 class="mb-6 font-bold text-xl " style="font-style: Medium; margin-top: 37px; margin-bottom: 24px; color: #57728E;">Earn Money!</h4>
-                <p class=" text-gray-700 text-lg mx-6 lg:mx-1  mb-8  text-center" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
+                <p class=" text-gray-700 text-lg mx-6 lg:mx-1  mt-10  text-center" style="line-height: 24px; color: rgba(123, 147, 175, 1);">
                 Earning Money is Easy?!<br> Depends on your Plan. Just do it.
                 </p>
               </div>
@@ -150,7 +159,7 @@
 
       <div class="lg:flex  justify-between px-14 xl:mt-780P 2xl:px-40 3xl:px-72 pt-10 bg-gray-15 py-24">
         <div class="w-full lg:w-2/3 mt-2">
-          <h3 class="font-bold text-center lg:text-left mt-16" style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Plan to Enter the Market with Magic Boards</h3>
+          <h3 class="font-bold text-center lg:text-left mt-16 primary-text" style="line-height: 35px; font-size: 28px;">Plan to Enter the Market with Magic Boards</h3>
           <div class=" flex justify-center lg:block mt-20">
             <div>
               <div onclick="resolveItem('NicheResearch')"  class="flex cursor-pointer justify-start">
@@ -207,10 +216,10 @@
       </div>
 
       <div id="proposalSection" class=" px-14 lg:px-40  ">
-        <h3 class=" text-center lg:hidden my-14 font-bold " style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Simulate your Future</h3>
+        <h3 class=" text-center lg:hidden my-14 font-bold primary-text" style="line-height: 24px; font-size: 28px;">Simulate your Future</h3>
         <div class="grid lg:flex justify-between overflow-y-hidden " >
           <div class="lg:w-8/12  my-16 ">
-            <h3 class="hidden lg:block mb-14 mt-24 font-bold my-auto" style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Simulate your Future</h3>
+            <h3 class="hidden lg:block mb-14 mt-24 font-bold my-auto primary-text" style="line-height: 24px; font-size: 28px;">Simulate your Future</h3>
             <p class="w-full lg:w-2/5 text-base" style="color: #7B93AF;">
 You should be aware about your status in future as well as timing of re-ordering and inventory management. There are some hidden costs should be considered in planning. SellGuru’s AI Core will help you by analyzing big data in the market.
             </p>
@@ -224,10 +233,10 @@ You should be aware about your status in future as well as timing of re-ordering
       
 
       <div id="Collabrative" class=" px-14 py-8 lg:px-40 bg-gray-15 ">
-        <h3 class="text-center my-14 md:hidden  font-bold " style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Collabrative Team work!</h3>
+        <h3 class="text-center my-14 md:hidden  font-bold primary-text" style="line-height: 24px; font-size: 28px;">Collabrative Team work!</h3>
         <div class="grid lg:flex justify-between overflow-y-hidden " >
           <div class="lg:w-8/12  my-16 ">
-            <h3 class="hidden md:block mb-14 mt-10 font-bold my-auto" style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Collabrative Team work!</h3>
+            <h3 class="hidden md:block mb-14 mt-10 font-bold my-auto primary-text" style="line-height: 24px; font-size: 28px;">Collabrative Team work!</h3>
             <p class="w-full lg:w-2/5 text-base" style="color: #7B93AF;">
               Entrepreneur, Investor & 5x Founder: 3 Exits,
                $35MM+ Venture Raised, 500+ Advisory Calls -
@@ -244,10 +253,10 @@ You should be aware about your status in future as well as timing of re-ordering
       </div>
 
       <div id="Compairideas" class=" px-14 py-8 lg:px-40 ">
-        <h3 class="text-center my-14 md:hidden  font-bold " style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Compair ideas</h3>
+        <h3 class="text-center my-14 md:hidden  font-bold primary-text " style="line-height: 24px; font-size: 28px;">Compair ideas</h3>
         <div class="grid lg:flex justify-between overflow-y-hidden " >
           <div class="lg:w-8/12  my-16 ">
-            <h3 class="hidden md:block mb-14 mt-10 font-bold my-auto" style="line-height: 24px; font-size: 28px; color: rgba(6, 199, 141, 1);">Compair ideas</h3>
+            <h3 class="hidden md:block mb-14 mt-10 font-bold my-auto primary-text" style="line-height: 24px; font-size: 28px; ">Compair ideas</h3>
             <p class="w-full lg:w-3/5 text-base" style="color: #7B93AF;">
 SellGuru scores your Plans so you can compare them together or with others’ Plan. If you need to chose one or two products among many, it would be great tool you cannot find the same anywhere else.
             </p>
@@ -290,24 +299,24 @@ SellGuru scores your Plans so you can compare them together or with others’ Pl
       </div>
 
 
-      <footer class="pb-14 flex justify-center bg-gray-9 bg-dark " >
+      <footer class="pb-14 flex justify-center primary-bg " >
         <div class="w-8/12 lg:w-10/12">
           <div class="lg:flex justify-between mt-12 items-baseline">
             <!-- <h5 class=" text-center lg:text-left italic text-2xl " style="color: rgba(6, 199, 141, 1); font-weight: 700; line-height: 28.13px;">SELLGURU</h5> -->
             <img src="../img/logo.png" alt="">
             <div class=" lg:hidden border-t border-white my-8 opacity-10"></div>
             <div class="text-center lg:text-left">
-              <a class="md:mr-14 text-white font-DmSans " style=" font-size: 22px;" href="#">Ready to get Demo?</a>
-              <button id="buttonModal3" onclick="visibleModal()" class="mt-5 lg:mt-0 text-white primary-bg  rounded-lg" style="font-size: 17px;padding:14px 41px ; ">Get started</button>
+              <a class="md:mr-14 primary-text font-DmSans " style=" font-size: 22px;" href="#">Ready to get Demo?</a>
+              <button id="buttonModal3" onclick="visibleModal()" class="mt-5 lg:mt-0 text-white buttonColor  rounded-lg" style="font-size: 17px;padding:14px 41px ; ">Get started</button>
             </div>
           </div>
   
           <div class="border-t border-white mt-10 mb-11 opacity-10"></div>
           <div class="text-center lg:text-left lg:flex items-baseline">
-            <label for="email" class="text-white font-DmSans " style="font-size: 22px; ">Subscribe to our newsletter</label>
+            <label for="email" class="primary-text font-DmSans " style="font-size: 22px; ">Subscribe to our newsletter</label>
             <div class="lg:mx-8 lg:flex ">
-              <input id="email" class="py-4 px-2 my-5 lg:my-0 w-9/12 lg:w-auto text-main-set fill-dark  border-b outline-none bg-dark" type="email" placeholder="Email address" >
-              <button onclick="alert('done')" class="rounded-tr-lg primary-bg " style="padding: 22px;">
+              <input id="email" class="py-4 px-2 my-5 lg:my-0 w-9/12 lg:w-auto primary-text fill-dark  border-b outline-none primary-bg" type="email" placeholder="Email address" >
+              <button onclick="alert('done')" class="rounded-tr-lg buttonColor " style="padding: 22px;">
                 <img src="../img/ArrowRight.svg" alt="">
               </button>
             </div>
@@ -333,6 +342,7 @@ SellGuru scores your Plans so you can compare them together or with others’ Pl
     </div>
     <script src="./main.js"></script>
     <script src="./player.js"></script>
+    <script src="./fireBase.js"></script>
   </body>
 
   <style>

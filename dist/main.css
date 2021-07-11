@@ -1,13 +1,17 @@
 .primary-bg{
-	background-color: #06C78D;
+	background-color: #DBDDE8;
 }
 
 .primary-text {
-	color: #06C78D;
+	color: #57728E;
 }
 
 .font-roboto {
 	font-family:Roboto;
+}
+
+.buttonColor{
+  background-color: #ED088B;
 }
 
 .gradianGreen {
