@@ -5,10 +5,10 @@ document.getElementById('mes-2').scrollIntoView({
 		inline:"center" 
 })
 
-document.getElementsByTagName('body').scrollIntoView({
-		block:"nearest",
-		inline:"center" 
-})
+// document.getElementsByTagName('body').scrollIntoView({
+// 		block:"nearest",
+// 		inline:"center" 
+// })
 // let activePanel = 'NicheResearch'
 
 const users = [
@@ -67,7 +67,7 @@ function resolveItem(id) {
 		element.src = '../img/Group 6485.png'
 		activePanel = 'CompatitiveAdvantage'
 		borad.src = '../img/Boards/2.png'
-		BoardName.innerHTML = 'Compatitive Advantage'
+		BoardName.innerHTML = 'Competitive Advantage'
 
 		NicheResearch.src = '../img/Group 12859.png'
 		Sourcing.src = '../img/Group 12855.png'
@@ -87,7 +87,7 @@ function resolveItem(id) {
 		element.src = '../img/lunch.png'
 		activePanel = 'LunchingPlan'
 		borad.src = '../img/Boards/4.png'
-		BoardName.innerHTML = 'Lunching Plan'
+		BoardName.innerHTML = 'Launching Plan'
 
 		CompatitiveAdvantage.src = '../img/Group 12854.png'
 		NicheResearch.src = '../img/Group 12859.png'
@@ -97,7 +97,7 @@ function resolveItem(id) {
 		element.src = '../img/Group 12853.png'
 		activePanel = 'NicheResearch'
 		borad.src = '../img/Boards/1.png'
-		BoardName.innerHTML = 'Niche Research'
+		BoardName.innerHTML = 'Market Research'
 
 		CompatitiveAdvantage.src = '../img/Group 12854.png'
 		Sourcing.src = '../img/Group 12855.png'
@@ -184,18 +184,20 @@ function resolveUserName(id,mes) {
 		mess[i].classList.remove('transation')
 	}
 	let mesage = document.getElementById(mes)
+
+	mesage.classList.add('transation')
+	mesage.classList.remove('opacity-40')
+
 	mesage.scrollIntoView({
 		behavior: 'smooth',
 		block:"nearest",
 		inline:"center" 
 	});
 
-	mesage.classList.add('transation')
 
 	let user = document.getElementById(id)
 	member = users.filter(u => u.id == id)
 	activeUser =member[0]
-	mesage.classList.remove('opacity-40')
 
 	active = document.getElementsByClassName('activeUserMessage')[0]
 

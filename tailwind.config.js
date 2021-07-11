@@ -53,6 +53,7 @@ module.exports = {
         '68P': '68px',
         '70P':'70px',
         '100P': '100px',
+        '780P':'780px'
       },
 
       fontSize: {
